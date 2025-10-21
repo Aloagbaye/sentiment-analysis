@@ -52,8 +52,8 @@ jobs:
           until pg_isready -h localhost -p 5432; do echo "Waiting for db..."; sleep 2; done
 
       - name: Run tests
-        run: |
-    	     PYTHONPATH=. pytest app/tests/
+        run:|
+          PYTHONPATH=. pytest app/tests/
 
   build:
     runs-on: ubuntu-latest
