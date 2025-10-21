@@ -52,7 +52,7 @@ jobs:
           until pg_isready -h localhost -p 5432; do echo "Waiting for db..."; sleep 2; done
 
       - name: Run tests
-        run:|
+        run: |
           PYTHONPATH=. pytest app/tests/
 
   build:
