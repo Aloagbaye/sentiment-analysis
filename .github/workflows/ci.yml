@@ -49,7 +49,7 @@ jobs:
 
       - name: Train model
         run: |
-          python train.py
+          python app/train.py
 
       - name: Wait for PostgreSQL
         run: |
