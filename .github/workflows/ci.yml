@@ -47,6 +47,10 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
+      - name: Train model
+        run: |
+          python train.py
+
       - name: Wait for PostgreSQL
         run: |
           until pg_isready -h localhost -p 5432; do echo "Waiting for db..."; sleep 2; done
